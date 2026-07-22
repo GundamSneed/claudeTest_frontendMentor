@@ -1,0 +1,146 @@
+/* ---------------------------------- */
+/* Custom properties (from style-guide.md) */
+/* ---------------------------------- */
+:root {
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+
+  --font-family: "Inter", sans-serif;
+}
+
+/* ---------------------------------- */
+/* Reset */
+/* ---------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------------------------------- */
+/* Body */
+/* ---------------------------------- */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--color-grey-900);
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  padding: 2rem 1.5rem;
+}
+
+/* ---------------------------------- */
+/* Profile card */
+/* ---------------------------------- */
+.profile-card {
+  width: 100%;
+  max-width: 23rem; /* ~368px, matches desktop design width */
+  background-color: var(--color-grey-800);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-card__avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-card__name {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.profile-card__location {
+  color: var(--color-green);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.profile-card__bio {
+  color: var(--color-white);
+  margin-top: 1.25rem;
+}
+
+/* ---------------------------------- */
+/* Links */
+/* ---------------------------------- */
+.profile-card__links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.profile-card__link {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--color-grey-700);
+  color: var(--color-white);
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.profile-card__link:hover,
+.profile-card__link:focus-visible {
+  background-color: var(--color-green);
+  color: var(--color-grey-900);
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.profile-card__link:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+.profile-card__link:active {
+  transform: translateY(0);
+}
+
+/* ---------------------------------- */
+/* Attribution */
+/* ---------------------------------- */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.attribution a {
+  color: var(--color-green);
+}
