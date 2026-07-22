@@ -96,6 +96,10 @@ body {
 /* ---------------------------------- */
 /* Links */
 /* ---------------------------------- */
+.profile-card nav {
+  width: 100%;
+}
+
 .profile-card__links {
   width: 100%;
   display: flex;
@@ -104,9 +108,15 @@ body {
   margin-top: 1.5rem;
 }
 
+.profile-card__links li {
+  width: 100%;
+}
+
 .profile-card__link {
   display: block;
   width: 100%;
+  box-sizing: border-box;
+  text-align: center;
   padding: 0.8rem 0;
   border-radius: 0.5rem;
   background-color: var(--color-grey-700);
